@@ -1,0 +1,316 @@
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: midnightblue;
+    color: white;
+    line-height: 1.6;
+}
+
+/* 2. Links and buttons */
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* 3. Navigation bar */
+
+.site-header {
+    background-color: darkslategray;
+    padding: 20px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span,
+.eyebrow,
+.project-number {
+    color: mediumspringgreen;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a:hover {
+    color: mediumspringgreen;
+}
+
+#theme-toggle {
+    background-color: darkslategray;
+    color: white;
+    border: 1px solid mediumspringgreen;
+    border-radius: 5px;
+}
+
+/* 4. Main introduction */
+
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero h2 {
+    color: mediumspringgreen;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.primary-button {
+    display: inline-block;
+    background-color: mediumspringgreen;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+.primary-button:hover {
+    opacity: 0.8;
+}
+
+/* 5. All sections */
+
+.section {
+    padding: 50px 20px;
+    border-top: 1px solid slategray;
+}
+
+.section > h2 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    font-size: 13px;
+}
+
+/* 6. About me */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid mediumspringgreen;
+}
+
+.about-content p,
+.skill-card p,
+.project-card p {
+    color: lightsteelblue;
+}
+
+/* 7. Skills and projects */
+
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card,
+.project-card {
+    background-color: darkslategray;
+    padding: 20px;
+    border: 1px solid slategray;
+    border-radius: 10px;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    border-color: mediumspringgreen;
+}
+
+/* 8. Hobbies */
+
+.hobbies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hobbies-list span {
+    background-color: darkslategray;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid slategray;
+}
+
+/* 9. Contact form */
+
+#contact-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px;
+    background-color: darkslategray;
+    color: white;
+    border: 1px solid slategray;
+    border-radius: 5px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#form-status {
+    color: mediumspringgreen;
+}
+
+/* 10. Footer */
+
+.site-footer {
+    padding: 25px 20px;
+    border-top: 1px solid slategray;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: lightsteelblue;
+}
+
+.site-footer a:hover {
+    color: mediumspringgreen;
+}
+
+/* 11. Light theme */
+
+body.light-theme {
+    background-color: whitesmoke;
+    color: black;
+}
+
+body.light-theme a {
+    color: black;
+}
+
+body.light-theme .site-header,
+body.light-theme .skill-card,
+body.light-theme .project-card,
+body.light-theme .hobbies-list span {
+    background-color: white;
+    color: black;
+}
+
+body.light-theme #theme-toggle {
+    background-color: white;
+    color: black;
+}
+
+body.light-theme #contact-form input,
+body.light-theme #contact-form textarea {
+    background-color: white;
+    color: black;
+}
+
+body.light-theme .about-content p,
+body.light-theme .skill-card p,
+body.light-theme .project-card p,
+body.light-theme .site-footer {
+    color: dimgray;
+}
+
+body.light-theme .logo span,
+body.light-theme .eyebrow,
+body.light-theme .project-number,
+body.light-theme .hero h2,
+body.light-theme #form-status {
+    color: seagreen;
+}
+
+body.light-theme .primary-button {
+    background-color: seagreen;
+    color: white;
+}
+
+/* 12. Tablet and mobile screens */
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 13. Small mobile screens */
+
+@media (max-width: 480px) {
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .profile-photo {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+}
